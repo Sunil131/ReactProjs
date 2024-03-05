@@ -45,6 +45,9 @@ function Header()
                             <NavLink to="/register" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-orange-900" : "text-gray-900"} `}>
                                 Register
                             </NavLink>
+                            <NavLink to="/account" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-orange-900" : "text-gray-900"} `}>
+                                My Account
+                            </NavLink>
                             <NavLink to="/" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-orange-900" : "text-gray-900"} `}>
                                 Services
                             </NavLink>
