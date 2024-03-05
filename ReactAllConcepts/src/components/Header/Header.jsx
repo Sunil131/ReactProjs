@@ -13,20 +13,10 @@ import
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { NavLink, Link } from 'react-router-dom'
 
+import Paper from '@mui/material/Paper';
 
 
 
-const products = [
-    { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-    { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-    { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-    { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-    { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
-const callsToAction = [
-    { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-    { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
 
 function classNames(...classes)
 {
@@ -38,39 +28,43 @@ function classNames(...classes)
 function Header()
 {
     return (
-        <header className="bg-white">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-                <div className="flex lg:flex-1">
-                    <Link to="/" className="-m-1.5 p-1.5">
-                        <span className="sr-only">BITA Solutions</span>
-                        <img className="h-8 w-auto" src="../../bitalogo.png" alt="" />
-                    </Link>
-                </div>
-                <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                    <NavLink to="/" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-red-900" : "text-gray-900"} `}>
-                        Home
-                    </NavLink>
-                    <NavLink to="/" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-orange-900" : "text-gray-900"} `}>
-                        My Account
-                    </NavLink>
-                    <NavLink to="/" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-orange-900" : "text-gray-900"} `}>
-                        Services
-                    </NavLink>
-                    <NavLink to="/about" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-orange-900" : "text-gray-900"} `}>
-                        About Us
-                    </NavLink>
-                    <NavLink to="/" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-orange-900" : "text-gray-900"} `}>
-                        Contact Us
-                    </NavLink>
-                </Popover.Group>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Link to="/"
-                        className="text-sm font-semibold leading-6 text-gray-900">
-                        Log in <span aria-hidden="true">&rarr;</span>
-                    </Link>
-                </div>
-            </nav>
-        </header>
+        <>
+            <Paper elevation={3}>
+                <header className="bg-white">
+                    <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+                        <div className="flex lg:flex-1">
+                            <Link to="/" className="-m-1.5 p-1.5">
+                                <span className="sr-only">BITA Solutions</span>
+                                <img className="h-8 w-auto" src="../../bitalogo.png" alt="" />
+                            </Link>
+                        </div>
+                        <Popover.Group className="hidden lg:flex lg:gap-x-12">
+                            <NavLink to="/" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-red-900" : "text-gray-900"} `}>
+                                Home
+                            </NavLink>
+                            <NavLink to="/register" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-orange-900" : "text-gray-900"} `}>
+                                Register
+                            </NavLink>
+                            <NavLink to="/" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-orange-900" : "text-gray-900"} `}>
+                                Services
+                            </NavLink>
+                            <NavLink to="/about" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-orange-900" : "text-gray-900"} `}>
+                                About Us
+                            </NavLink>
+                            <NavLink to="/" className={({ isActive }) => `Popover.Group>"text-sm font-semibold leading-6 ${isActive ? "text-orange-900" : "text-gray-900"} `}>
+                                Contact Us
+                            </NavLink>
+                        </Popover.Group>
+                        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+                            <Link to="/"
+                                className="text-sm font-semibold leading-6 text-gray-900">
+                                Log in <span aria-hidden="true">&rarr;</span>
+                            </Link>
+                        </div>
+                    </nav>
+                </header>
+            </Paper>
+        </>
 
 
     )
